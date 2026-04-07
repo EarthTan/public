@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ride and Seek - Photo wall 活动照片墙">
+    <title>Ride and Seek - 活动照片墙</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        /* Masonry-like layout */
+        .gallery {
+            column-count: 4;
+            column-gap: 20px;
+        }
+
+        @media(max-width: 1200px) {
+            .gallery { column-count: 3; }
+        }
+        @media(max-width: 800px) {
+            .gallery { column-count: 2; }
+        }
+        @media(max-width: 500px) {
+            .gallery { column-count: 1; }
+            .container { padding: 15px; }
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .gallery img:hover {
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 20px 15px 10px;
+            border-radius: 0 0 12px 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .gallery-item:hover .image-caption {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2025-11-21 🚴Ride and Seek</h1>
+            <div class="subtitle">the moment worth remembering</div>
+        </header>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/groupphoto 4V8A7868.JPG" alt="集体合影 1">
+                <div class="image-caption">集体合影 - 美好时刻</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/groupphoto 4V8A7871.JPG" alt="集体合影 2">
+                <div class="image-caption">集体合影 - 欢乐时光</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/groupphoto 4V8A7874.JPG" alt="集体合影 3">
+                <div class="image-caption">集体合影 - 团队精神</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/hunt.JPG" alt="寻宝活动">
+                <div class="image-caption">寻宝活动 - 探索乐趣</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/hunt2.JPG" alt="寻宝活动 2">
+                <div class="image-caption">寻宝活动 - 团队协作</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/hunt3.JPG" alt="寻宝活动 3">
+                <div class="image-caption">寻宝活动 - 精彩瞬间</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/ziyue.JPG" alt="子悦">
+                <div class="image-caption">子悦 - 活动参与</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/主持.JPG" alt="主持人">
+                <div class="image-caption">主持人 - 活动引导</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/分发礼品.JPG" alt="分发礼品">
+                <div class="image-caption">礼品分发 - 惊喜时刻</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/手势示例.jpg" alt="手势示例">
+                <div class="image-caption">手势示例 - 互动环节</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/教室布置.jpg" alt="教室布置">
+                <div class="image-caption">教室布置 - 温馨环境</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/礼品摆放.JPG" alt="礼品摆放">
+                <div class="image-caption">礼品摆放 - 精心准备</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/礼品摆放2.JPG" alt="礼品摆放 2">
+                <div class="image-caption">礼品摆放 - 丰富多样</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/礼品摆放3.JPG" alt="礼品摆放 3">
+                <div class="image-caption">礼品摆放 - 精美展示</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/落叶之水.JPG" alt="落叶之水">
+                <div class="image-caption">落叶之水 - 自然美景</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/餐品摆放.JPG" alt="餐品摆放">
+                <div class="image-caption">餐品摆放 - 美食盛宴</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/餐品摆放2.JPG" alt="餐品摆放 2">
+                <div class="image-caption">餐品摆放 - 精致美味</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/餐品摆放3.JPG" alt="餐品摆放 3">
+                <div class="image-caption">餐品摆放 - 丰盛佳肴</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/骑行台.JPG" alt="骑行台">
+                <div class="image-caption">骑行台 - 运动体验</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/骑行台2.JPG" alt="骑行台 2">
+                <div class="image-caption">骑行台 - 活力四射</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Ride and Seek 活动照片墙 | 记录每一个精彩瞬间</p>
+        </footer>
+    </div>
+</body>
+</html>
